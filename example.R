@@ -31,6 +31,8 @@ examples <- it(10000)
 par(mfrow=c(1,1))
 hist(examples, col = "red", breaks = 100, main="Random Permutations", xlab="")
 abline(v = test.diff, col = "black", lwd = 4)
+abline(v = quantile(examples, 0.025), col = "blue")
+abline(v = quantile(examples, 0.975), col = "blue")
 
 
 
